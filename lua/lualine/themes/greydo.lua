@@ -4,7 +4,7 @@ local colors = {
     black        = tostring(greydo.Normal.bg),
     white        = tostring(greydo.Normal.fg),
     red          = tostring(greydo.Constant.fg),
-    green        = tostring(greydo.Type.fg),
+    green        = tostring(greydo.Green),
     blue         = tostring(greydo.Normal.fg.rotate(186).saturate(100)),
     yellow       = tostring(greydo.Statement.fg),
     gray         = '#a89984',
@@ -14,7 +14,7 @@ local colors = {
 }
 greydo = {
     normal = {
-        a = { bg = colors.gray, fg = colors.black },
+        a = { bg = colors.green, fg = colors.black },
         b = { bg = colors.lightgray, fg = colors.white },
         c = { bg = colors.darkgray, fg = colors.gray }
     },

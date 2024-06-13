@@ -10,22 +10,6 @@ local lush = require('lush')
 local hsl = lush.hsl
 
 -- Colors
-local light_grey = hsl('#ADB5BD')
-local white = hsl(37, 16, 86)
-local dark_grey = hsl(210,11,20)
-local blue = white.rotate(186).saturate(100)
--- local red = white.rotate(-37).saturate(100)
--- local yellow = white.rotate(10).saturate(100)
-local purple = white.rotate(235).saturate(100)
--- local green = white.rotate(100).saturate(100)
-
--- local red = hsl(0,100,50)
--- local yellow = hsl(60,100,50)
--- local green = hsl(120,100,50)
--- local cyan = hsl(180,100,50)
--- local blue = hsl(240,100,50)
--- local magenta = hsl(300,100,50)
-
 local red = hsl(0,70,70)
 local red_yellow = hsl(30,70,70)
 local yellow = hsl(60,70,70)
@@ -47,6 +31,8 @@ local theme = lush(function(injected_functions)
     local sym = injected_functions.sym
     return {
         Normal { bg = hsl(240,20,20), fg = hsl(240,20,75) },
+
+        Green { green },
         -- The following are the Neovim (as of 0.8.0-dev+100-g371dfb174) highlight
         -- groups, mostly used for styling UI elements.
         -- Comment them out and add your own properties to override the defaults.
