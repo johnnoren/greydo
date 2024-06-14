@@ -18,4 +18,4 @@ package.loaded['lush_theme.greydo'] = nil
 
 -- include our theme file and pass it to lush to apply
 require('lush')(require('lush_theme.greydo'))
-require('lualine').setup { options = { theme = greydo } }
+require('lualine').setup { options = { theme = 'greydo' } }
