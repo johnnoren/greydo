@@ -10,19 +10,7 @@ local lush = require('lush')
 local hsl = lush.hsl
 
 -- Colors
-local red = hsl(0,70,70)
-local red_yellow = hsl(30,70,70)
-local yellow = hsl(60,70,70)
-local yellow_green = hsl(90,70,70)
-local green = hsl(120,70,70)
-local green_cyan = hsl(150,70,70)
-local cyan = hsl(180,70,70)
-local cyan_blue = hsl(210,70,70)
-local blue = hsl(240,70,70)
-local blue_blue_magenta_magenta = hsl(255,70,70)
-local blue_magenta = hsl(270,70,70)
-local magenta = hsl(300,70,70)
-local magenta_red = hsl(330,70,70)
+local colors = require('colors')
 
 -- LSP/Linters mistakenly show `undefined global` errors in the spec, they may
 -- support an annotation like the following. Consult your server documentation.
@@ -53,11 +41,11 @@ local theme = lush(function(injected_functions)
         -- DiffAdd        { }, -- Diff mode: Added line |diff.txt|
         -- DiffChange     { }, -- Diff mode: Changed line |diff.txt|
         -- DiffDelete     { }, -- Diff mode: Deleted line |diff.txt|
-        DiffText       { bg = red, fg = Normal.fg.lighten(50) }, -- Diff mode: Changed text within a changed line |diff.txt|
+        DiffText       { bg = colors.red, fg = Normal.fg.lighten(50) }, -- Diff mode: Changed text within a changed line |diff.txt|
         EndOfBuffer    { fg = Normal.bg }, -- Filler lines (~) after the end of the buffer. By default, this is highlighted like |hl-NonText|.
         -- TermCursor     { }, -- Cursor in a focused terminal
         -- TermCursorNC   { }, -- Cursor in an unfocused terminal
-        ErrorMsg       { bg = red, fg = Normal.fg.lighten(50) }, -- Error messages on the command line
+        ErrorMsg       { bg = colors.red, fg = Normal.fg.lighten(50) }, -- Error messages on the command line
         -- VertSplit      { }, -- Column separating vertically split windows
         -- Folded         { }, -- Line used for closed folds
         -- FoldColumn     { }, -- 'foldcolumn'
@@ -122,7 +110,7 @@ local theme = lush(function(injected_functions)
 
         Comment { fg = LineNr.fg.lighten(10) },    -- Any comment
 
-        Constant { fg = red },                     -- (*) Any constant
+        Constant { fg = colors.red },                     -- (*) Any constant
         -- String         { }, --   A string constant: "this is a string"
         -- Character      { }, --   A character constant: 'c', '\n'
         -- Number         { }, --   A number constant: 234, 0xff
@@ -140,7 +128,7 @@ local theme = lush(function(injected_functions)
         -- Keyword        { }, --   any other keyword
         -- Exception      { }, --   try, catch, throw
 
-        PreProc { fg = blue_magenta },    -- (*) Generic Preprocessor
+        PreProc { fg = colors.blue_magenta },    -- (*) Generic Preprocessor
         -- Include        { }, --   Preprocessor #include
         -- Define         { }, --   Preprocessor #define
         -- Macro          { }, --   Same as Define
@@ -161,7 +149,7 @@ local theme = lush(function(injected_functions)
         Underlined { gui = "underline" },                                       -- Text that stands out, HTML links
         -- Ignore         { }, -- Left blank, hidden |hl-Ignore| (NOTE: May be invisible here in template)
         Error { ErrorMsg },                                  -- Any erroneous construct
-        Todo { bg = yellow, fg = Normal.fg.darken(50) },       -- Anything that needs extra attention; mostly the keywords TODO FIXME and XXX
+        Todo { bg = colors.yellow, fg = Normal.fg.darken(50) },       -- Anything that needs extra attention; mostly the keywords TODO FIXME and XXX
 
         -- These groups are for the native LSP client and diagnostic system. Some
         -- other LSP clients may use these groups, or use their own. Consult your
@@ -274,22 +262,6 @@ local theme = lush(function(injected_functions)
 		sym"@markup.list.markdown" { fg = Normal.fg.lighten(10), bold = true },
     }
 end)
-
-theme = {
-red = hsl(0,70,70),
-red_yellow = hsl(30,70,70),
-yellow = hsl(60,70,70),
-yellow_green = hsl(90,70,70),
-green = hsl(120,70,70),
-green_cyan = hsl(150,70,70),
-cyan = hsl(180,70,70),
-cyan_blue = hsl(210,70,70),
-blue = hsl(240,70,70),
-blue_blue_magenta_magenta = hsl(255,70,70),
-blue_magenta = hsl(270,70,70),
-magenta = hsl(300,70,70),
-magenta_red = hsl(330,70,70),
-}
 
 -- Return our parsed theme for extension or use elsewhere.
 return theme
