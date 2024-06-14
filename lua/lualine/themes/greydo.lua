@@ -1,3 +1,5 @@
+local lush = require('lush')
+local hsl = lush.hsl
 local greydo = require('lush_theme.greydo')
 local base_colors = require('lush_theme.colors')
 
