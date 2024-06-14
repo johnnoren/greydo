@@ -6,6 +6,7 @@ local colors = {
     red          = tostring(greydo.Constant.fg),
     green        = tostring(greydo.Green),
     blue         = tostring(greydo.Normal.fg.rotate(186).saturate(100)),
+    medium_blue   = tostring(greydo.Comment),
     yellow       = tostring(greydo.Statement.fg),
     gray         = '#a89984',
     darkgray     = '#3c3836',
@@ -14,12 +15,12 @@ local colors = {
 }
 greydo = {
     normal = {
-        a = { bg = colors.green, fg = colors.black },
+        a = { bg = colors.medium_blue, fg = colors.black },
         b = { bg = colors.lightgray, fg = colors.white },
         c = { bg = colors.darkgray, fg = colors.gray }
     },
     insert = {
-        a = { bg = colors.blue, fg = colors.black },
+        a = { bg = colors.green, fg = colors.black },
         b = { bg = colors.lightgray, fg = colors.white },
         c = { bg = colors.lightgray, fg = colors.white }
     },

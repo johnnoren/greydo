@@ -31,8 +31,6 @@ local theme = lush(function(injected_functions)
     local sym = injected_functions.sym
     return {
         Normal { bg = hsl(240,20,20), fg = hsl(240,20,75) },
-
-        Green { green },
         -- The following are the Neovim (as of 0.8.0-dev+100-g371dfb174) highlight
         -- groups, mostly used for styling UI elements.
         -- Comment them out and add your own properties to override the defaults.
@@ -276,6 +274,22 @@ local theme = lush(function(injected_functions)
 		sym"@markup.list.markdown" { fg = Normal.fg.lighten(10), bold = true },
     }
 end)
+
+theme = {
+red = hsl(0,70,70),
+red_yellow = hsl(30,70,70),
+yellow = hsl(60,70,70),
+yellow_green = hsl(90,70,70),
+green = hsl(120,70,70),
+green_cyan = hsl(150,70,70),
+cyan = hsl(180,70,70),
+cyan_blue = hsl(210,70,70),
+blue = hsl(240,70,70),
+blue_blue_magenta_magenta = hsl(255,70,70),
+blue_magenta = hsl(270,70,70),
+magenta = hsl(300,70,70),
+magenta_red = hsl(330,70,70),
+}
 
 -- Return our parsed theme for extension or use elsewhere.
 return theme
