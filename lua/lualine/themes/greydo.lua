@@ -1,11 +1,11 @@
 local greydo = require('lush_theme.greydo')
-local base_colors = require('lush_theme.greydo.colors')
+local base_colors = require('lush_theme.colors')
 
 local colors = {
     black        = tostring(greydo.Normal.bg),
     white        = tostring(greydo.Normal.fg),
     red          = tostring(greydo.Constant.fg),
-    green        = tostring(greydo.Green),
+    green        = tostring(base_colors.green),
     blue         = tostring(greydo.Normal.fg.rotate(186).saturate(100)),
     medium_blue  = tostring(greydo.Comment),
     yellow       = tostring(base_colors.yellow),

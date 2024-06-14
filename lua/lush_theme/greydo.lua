@@ -10,7 +10,7 @@ local lush = require('lush')
 local hsl = lush.hsl
 
 -- Colors
-local colors = require('colors')
+local colors = require('lush_theme.colors')
 
 -- LSP/Linters mistakenly show `undefined global` errors in the spec, they may
 -- support an annotation like the following. Consult your server documentation.
@@ -134,7 +134,7 @@ local theme = lush(function(injected_functions)
         -- Macro          { }, --   Same as Define
         -- PreCondit      { }, --   Preprocessor #if, #else, #endif, etc.
 
-        Type { fg = green },       -- (*) int, long, char, etc.
+        Type { fg = colors.green },       -- (*) int, long, char, etc.
         -- StorageClass   { }, --   static, register, volatile, etc.
         -- Structure      { }, --   struct, union, enum, etc.
         -- Typedef        { }, --   A typedef
