@@ -14,7 +14,7 @@ local colors = {
     lightgray    = '#504945',
     inactivegray = '#7c6f64',
 }
-greydo = {
+return = {
     normal = {
         a = { bg = colors.medium_blue, fg = colors.black },
         b = { bg = colors.lightgray, fg = colors.white },
@@ -46,6 +46,3 @@ greydo = {
         c = { bg = colors.darkgray, fg = colors.gray }
     }
 }
-
-require('lualine').setup { options = { theme = greydo } }
-
