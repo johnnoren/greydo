@@ -14,7 +14,7 @@ local colors = {
     lightgray    = '#504945',
     inactivegray = '#7c6f64',
 }
-return = {
+return {
     normal = {
         a = { bg = colors.medium_blue, fg = colors.black },
         b = { bg = colors.lightgray, fg = colors.white },
