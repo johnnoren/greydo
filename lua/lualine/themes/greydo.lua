@@ -26,17 +26,17 @@ return {
         c = { bg = colors.bg, fg = colors.medium_blue }
     },
     visual = {
-        a = { bg = colors.yellow, fg = colors.black },
+        a = { bg = colors.yellow, fg = colors.bg },
         b = { bg = colors.dark_blue, fg = colors.fg },
         c = { bg = colors.bg, fg = colors.medium_blue }
     },
     replace = {
-        a = { bg = colors.red, fg = colors.black },
+        a = { bg = colors.red, fg = colors.bg },
         b = { bg = colors.dark_blue, fg = colors.fg },
         c = { bg = colors.bg, fg = colors.medium_blue }
     },
     command = {
-        a = { bg = colors.green, fg = colors.black },
+        a = { bg = colors.green, fg = colors.bg },
         b = { bg = colors.dark_blue, fg = colors.fg },
         c = { bg = colors.bg, fg = colors.medium_blue }
     },
